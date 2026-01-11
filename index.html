@@ -216,14 +216,101 @@
             </div>
         </section>
 
-        <footer id="contact" class="py-20 px-6 text-center border-t border-white/10">
-            <h2 class="text-3xl font-bold mb-6 text-gradient">Ready to Automate?</h2>
-            <p class="text-gray-400 mb-10">PT DevOps Nusantara Tech - Transformasi Digital Tanpa Drama.</p>
-            <button onclick="togglePage('work-page')" class="bg-white text-black px-10 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition">
-                Contact Us Today
+        <footer class="relative overflow-hidden border-t border-white/10 bg-[#050505] px-6 pt-28 pb-10">
+
+    <!-- Glow background -->
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+    <div class="relative max-w-7xl mx-auto">
+
+        <!-- Top CTA -->
+        <div class="mb-24 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                Build Faster. <span class="text-gradient">Deploy Smarter.</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-10">
+                Kami bantu tim kamu menghilangkan bottleneck deployment
+                lewat automation, cloud, dan DevOps best practice.
+            </p>
+            <button onclick="togglePage('work-page')"
+                class="inline-flex items-center gap-3 bg-white text-black px-10 py-4 rounded-2xl font-extrabold text-lg hover:scale-105 transition">
+                Start Your DevOps Journey →
             </button>
-            <p class="mt-20 text-gray-600 text-[10px] tracking-widest uppercase">&copy; 2026 PT DEVOPS NUSANTARA TECH. ALL RIGHTS RESERVED.</p>
-        </footer>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="grid gap-16 md:grid-cols-4 mb-20">
+
+            <!-- Brand -->
+            <div>
+                <h3 class="text-2xl font-extrabold tracking-tight mb-5">
+                    DEVOPS<span class="text-blue-500">NUSANTARA</span>
+                </h3>
+                <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                    Tech partner untuk CI/CD, cloud, dan DevOps engineering
+                    yang scalable, secure, dan production-ready.
+                </p>
+                <p class="text-xs uppercase tracking-widest text-gray-500">
+                    Transformasi Digital Tanpa Drama
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-300 mb-6">
+                    Navigate
+                </h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li><a href="#about" class="hover:text-white transition">About</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#team" class="hover:text-white transition">Team</a></li>
+                    <li><a href="#tech" class="hover:text-white transition">Technology</a></li>
+                </ul>
+            </div>
+
+            <!-- Expertise -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-300 mb-6">
+                    Expertise
+                </h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li>CI/CD Automation</li>
+                    <li>Cloud Architecture</li>
+                    <li>Kubernetes & Docker</li>
+                    <li>Infrastructure as Code</li>
+                </ul>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="card-bg p-8 border-blue-500/30 backdrop-blur-xl">
+                <h4 class="text-lg font-bold mb-4">
+                    Let’s Talk
+                </h4>
+                <p class="text-sm text-gray-400 mb-6">
+                    Diskusikan kebutuhan DevOps & cloud
+                    tim kamu bersama engineer kami.
+                </p>
+                <button onclick="togglePage('work-page')"
+                    class="w-full bg-blue-600 py-3 rounded-xl font-bold hover:bg-blue-500 transition">
+                    Contact Our Team
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-[11px] tracking-widest uppercase text-gray-600 text-center md:text-left">
+                © 2026 PT DevOps Nusantara Tech. All Rights Reserved.
+            </p>
+            <p class="text-[11px] text-gray-600">
+                Built with ❤️ by DevOps Nusantara
+            </p>
+        </div>
+
+    </div>
+</footer>
+
     </div>
 
     <div id="vision-page" class="hidden page-fade min-h-screen bg-[#050505] flex flex-col items-center justify-center px-6 py-20">
@@ -321,6 +408,7 @@
 </body>
 
 </html>
+
 
 
 
