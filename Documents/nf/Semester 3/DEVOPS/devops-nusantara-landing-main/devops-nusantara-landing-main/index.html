@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT DevOps Nusantara Tech | Transformasi Digital Tanpa Drama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap');
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #050505;
+            color: #ffffff;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-bg {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            transition: 0.3s;
+        }
+
+        .card-bg:hover {
+            border-color: #60a5fa;
+            background: rgba(96, 165, 250, 0.05);
+        }
+
+        .member-photo {
+            filter: grayscale(100%);
+            transition: 0.5s;
+        }
+
+        .member-photo:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .page-fade {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        input, select, textarea {
+            background: rgba(255,255,255,0.05) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            color: white !important;
+            outline: none !important;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #60a5fa !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="home-page" class="page-fade">
+        <nav class="fixed w-full z-50 backdrop-blur-lg border-b border-white/10 px-6 py-4">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <h1 class="text-xl font-extrabold tracking-tight cursor-pointer" onclick="togglePage('home-page')">
+                    DEVOPS<span class="text-blue-500">NUSANTARA PARID</span>
+                </h1>
+                <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                    <a href="#about" class="hover:text-white transition">About</a>
+                    <a href="#services" class="hover:text-white transition">Services</a>
+                    <a href="#team" class="hover:text-white transition">The Squad</a>
+                    <a href="#tech" class="hover:text-white transition">Tech</a>
+                </div>
+                <button onclick="togglePage('work-page')" class="bg-white text-black px-5 py-2 rounded-full text-sm font-bold hover:bg-gray-200 transition">
+                    Work with Us
+                </button>
+            </div>
+        </nav>
+
+        <section class="pt-32 pb-20 px-6 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-[1.1]">
+                    Bikin <span class="text-gradient">Pipeline</span> Kamu <br> Gak Pake Ribet.
+                </h2>
+                <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                    Kami membantu organisasi bertransformasi menuju pengembangan software yang lebih cepat, aman, dan terukur dengan praktik terbaik industri.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="bg-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-500 transition">Explore Services</button>
+                    <button onclick="togglePage('vision-page')" class="border border-white/20 px-8 py-4 rounded-2xl font-bold hover:bg-white/5 transition">
+                        Lihat Visi Kami
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 px-6 max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-blue-500 font-bold tracking-widest uppercase text-xs mb-4 block">Tentang Perusahaan</span>
+                    <h3 class="text-3xl font-bold mb-6">Mendorong Transformasi Digital di Asia Tenggara </h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        PT DevOps Nusantara Tech adalah tech firm yang fokus pada solusi CI/CD dan DevOps Engineering profesional. Kami percaya kecepatan dan kualitas bisa jalan bareng lewat sistem kerja yang tepat.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <div class="h-6 w-6 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 text-xs">✓</div>
+                            <p class="text-sm text-gray-300">Implementasi pipeline CI/CD modern & aman.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="h-6 w-6 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 text-xs">✓</div>
+                            <p class="text-sm text-gray-300">Budaya DevOps yang kolaboratif & berkelanjutan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="card-bg p-6 text-center">
+                        <h4 class="text-blue-400 font-bold mb-2">Innovation First</h4>
+                        <p class="text-xs text-gray-500">Solusi inovatif untuk performa sistem maksimal.</p>
+                    </div>
+                    <div class="card-bg p-6 text-center">
+                        <h4 class="text-pink-400 font-bold mb-2">Automation Culture</h4>
+                        <p class="text-xs text-gray-500">Bye manual, hello konsistensi dan kecepatan.</p>
+                    </div>
+                    <div class="card-bg p-6 text-center">
+                        <h4 class="text-purple-400 font-bold mb-2">Security by Design</h4>
+                        <p class="text-xs text-gray-500">Keamanan adalah pondasi utama kami.</p>
+                    </div>
+                    <div class="card-bg p-6 text-center">
+                        <h4 class="text-green-400 font-bold mb-2">Collaboration</h4>
+                        <p class="text-xs text-gray-500">Integrasi workflow Dev, QA, dan Ops.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 px-6 bg-white/[0.02]">
+            <div class="max-w-7xl mx-auto">
+                <h3 class="text-4xl font-bold mb-16 text-center">Our Core Services</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-bg p-8">
+                        <h4 class="text-xl font-bold mb-4 text-blue-400">CI/CD Pipeline Development</h4>
+                        <p class="text-gray-400 text-sm mb-6">Otomatisasi build, testing, hingga deployment dengan GitLab, GitHub Actions, atau Jenkins.</p>
+                    </div>
+                    <div class="card-bg p-8">
+                        <h4 class="text-xl font-bold mb-4 text-purple-400">DevOps as a Service</h4>
+                        <p class="text-gray-400 text-sm mb-6">Transformasi jangka panjang dengan pengelolaan infrastruktur otomatis.</p>
+                    </div>
+                    <div class="card-bg p-8 border-blue-500/50">
+                        <h4 class="text-xl font-bold mb-4 text-white">Cloud Architecture & Migration</h4>
+                        <p class="text-gray-400 text-sm mb-6">Migrasi sistem ke cloud dengan desain native dan ketersediaan tinggi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="py-24 px-6 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold tracking-tight mb-4 uppercase">The Squad <span class="text-blue-500 italic">Behind The Scene</span></h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-bg p-8 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-3xl overflow-hidden bg-white/5">
+                        <img src="poto parid.jfif" alt="Member" class="member-photo w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold uppercase">Ahmad Parid Hidayat</h3>
+                    <p class="text-blue-400 text-xs font-bold">CEO & Lead Architect</p>
+                </div>
+                <div class="card-bg p-8 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-3xl overflow-hidden bg-white/5">
+                        <img src="WhatsApp Image 2026-01-11 at 10.30.08.jpeg" alt="Member" class="member-photo w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold uppercase">Muhammad Arkan Alhakim</h3>
+                    <p class="text-blue-400 text-xs font-bold">COO</p>
+                </div>
+                <div class="card-bg p-8 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-3xl overflow-hidden bg-white/5">
+                        <img src="foto Ilham.jpeg" alt="Member" class="member-photo w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold uppercase">Ilham Abdullah</h3>
+                    <p class="text-blue-400 text-xs font-bold">CFO</p>
+                </div>
+                <div class="card-bg p-8 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-3xl overflow-hidden bg-whsite/5">
+                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Anya" alt="Member" class="member-photo w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold uppercase">Intan Ayu Lestari</h3>
+                    <p class="text-blue-400 text-xs font-bold">CMO</p>
+                </div>
+                <div class="card-bg p-8 text-center">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-3xl overflow-hidden bg-white/5">
+                        <img src="jian.jpeg" alt="Member" class="member-photo w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-lg font-bold uppercase">Adzani</h3>
+                    <p class="text-blue-400 text-xs font-bold">DevOps Engineer</p>
+                </div>
+                </div>
+        </section>
+
+        <section id="tech" class="py-20 px-6 text-center max-w-7xl mx-auto">
+            <h3 class="text-2xl font-bold mb-12">The Tech We Vibe With</h3>
+            <div class="flex flex-wrap justify-center gap-6">
+                <span class="px-6 py-3 card-bg text-sm font-bold">AWS / GCP / Azure </span>
+                <span class="px-6 py-3 card-bg text-sm font-bold">Docker & Kubernetes </span>
+                <span class="px-6 py-3 card-bg text-sm font-bold">Terraform & Ansible </span>
+                <span class="px-6 py-3 card-bg text-sm font-bold">Prometheus & Grafana </span>
+            </div>
+        </section>
+
+        <footer class="relative overflow-hidden border-t border-white/10 bg-[#050505] px-6 pt-28 pb-10">
+
+    <!-- Glow background -->
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[120px] rounded-full"></div>
+
+    <div class="relative max-w-7xl mx-auto">
+
+        <!-- Top CTA -->
+        <div class="mb-24 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                Build Faster. <span class="text-gradient">Deploy Smarter.</span>
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto mb-10">
+                Kami bantu tim kamu menghilangkan bottleneck deployment
+                lewat automation, cloud, dan DevOps best practice.
+            </p>
+            <button onclick="togglePage('work-page')"
+                class="inline-flex items-center gap-3 bg-white text-black px-10 py-4 rounded-2xl font-extrabold text-lg hover:scale-105 transition">
+                Start Your DevOps Journey →
+            </button>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="grid gap-16 md:grid-cols-4 mb-20">
+
+            <!-- Brand -->
+            <div>
+                <h3 class="text-2xl font-extrabold tracking-tight mb-5">
+                    DEVOPS<span class="text-blue-500">NUSANTARA</span>
+                </h3>
+                <p class="text-sm text-gray-400 leading-relaxed mb-6">
+                    Tech partner untuk CI/CD, cloud, dan DevOps engineering
+                    yang scalable, secure, dan production-ready.
+                </p>
+                <p class="text-xs uppercase tracking-widest text-gray-500">
+                    Transformasi Digital Tanpa Drama
+                </p>
+            </div>
+
+            <!-- Navigation -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-300 mb-6">
+                    Navigate
+                </h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li><a href="#about" class="hover:text-white transition">About</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#team" class="hover:text-white transition">Team</a></li>
+                    <li><a href="#tech" class="hover:text-white transition">Technology</a></li>
+                </ul>
+            </div>
+
+            <!-- Expertise -->
+            <div>
+                <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-gray-300 mb-6">
+                    Expertise
+                </h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li>CI/CD Automation</li>
+                    <li>Cloud Architecture</li>
+                    <li>Kubernetes & Docker</li>
+                    <li>Infrastructure as Code</li>
+                </ul>
+            </div>
+
+            <!-- Contact Card -->
+            <div class="card-bg p-8 border-blue-500/30 backdrop-blur-xl">
+                <h4 class="text-lg font-bold mb-4">
+                    Let’s Talk
+                </h4>
+                <p class="text-sm text-gray-400 mb-6">
+                    Diskusikan kebutuhan DevOps & cloud
+                    tim kamu bersama engineer kami.
+                </p>
+                <button onclick="togglePage('work-page')"
+                    class="w-full bg-blue-600 py-3 rounded-xl font-bold hover:bg-blue-500 transition">
+                    Contact Our Team
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-[11px] tracking-widest uppercase text-gray-600 text-center md:text-left">
+                © 2026 PT DevOps Nusantara Tech. All Rights Reserved.
+            </p>
+            <p class="text-[11px] text-gray-600">
+                Built with ❤️ by DevOps Nusantara
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+    </div>
+
+    <div id="vision-page" class="hidden page-fade min-h-screen bg-[#050505] flex flex-col items-center justify-center px-6 py-20">
+        <div class="max-w-4xl w-full">
+            <button onclick="togglePage('home-page')" class="mb-10 text-blue-500 font-bold flex items-center gap-2 hover:text-blue-400 transition">
+                ← Kembali ke Beranda
+            </button>
+            <h2 class="text-6xl font-extrabold mb-12 text-gradient">Visi & Misi Kami</h2>
+            <div class="space-y-16">
+                <div class="card-bg p-10 border-blue-500/30">
+                    <span class="text-blue-500 font-black tracking-[0.3em] uppercase text-xs mb-4 block">Visi</span>
+                    <p class="text-3xl md:text-4xl font-bold leading-tight">
+                        "Menjadi perusahaan DevOps dan CI/CD terdepan di Asia Tenggara yang mendorong transformasi digital melalui otomatisasi, efisiensi, dan inovasi teknologi."
+                    </p>
+                </div>
+                <div>
+                    <span class="text-blue-500 font-black tracking-[0.3em] uppercase text-xs mb-8 block">Misi Kami</span>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="card-bg p-8">
+                            <span class="text-2xl mb-4 block text-blue-400 font-bold">01</span>
+                            <p class="text-gray-300">Mengimplementasikan pipeline CI/CD modern yang aman dan efisien bagi setiap mitra.</p>
+                        </div>
+                        <div class="card-bg p-8">
+                            <span class="text-2xl mb-4 block text-purple-400 font-bold">02</span>
+                            <p class="text-gray-300">Mendukung perusahaan dalam mengadopsi budaya DevOps yang kolaboratif dan berkelanjutan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="work-page" class="hidden page-fade min-h-screen bg-[#050505] flex flex-col items-center py-20 px-6">
+        <div class="max-w-3xl w-full">
+            <button onclick="togglePage('home-page')" class="mb-10 text-blue-500 font-bold flex items-center gap-2 hover:text-blue-400 transition">
+                ← Kembali ke Beranda
+            </button>
+            
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-extrabold mb-4 text-gradient">Let's Build Something Great</h2>
+                <p class="text-gray-400">Konsultasikan kebutuhan infrastruktur dan otomatisasi tim kamu secara profesional.</p>
+            </div>
+
+            <div class="card-bg p-8 md:p-12">
+                <form class="space-y-6 text-left">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Nama Lengkap</label>
+                            <input type="text" placeholder="Masukkan nama..." class="w-full p-4 rounded-xl text-white">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Email Bisnis</label>
+                            <input type="email" placeholder="email@perusahaan.com" class="w-full p-4 rounded-xl text-white">
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Layanan yang Dibutuhkan</label>
+                        <select class="w-full p-4 rounded-xl appearance-none text-white">
+                            <option>CI/CD Pipeline Development</option>
+                            <option>DevOps as a Service</option>
+                            <option>Cloud Migration</option>
+                            <option>Infrastructure Automation (IaC)</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-wider text-gray-500">Ceritakan Kebutuhanmu</label>
+                        <textarea rows="4" placeholder="Apa yang bisa kami bantu?" class="w-full p-4 rounded-xl text-white"></textarea>
+                    </div>
+
+                    <button type="button" onclick="alert('Pesan terkirim!')" class="w-full bg-blue-600 py-4 rounded-xl font-bold text-lg hover:bg-blue-500 transition">
+                        Kirim Penawaran
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function togglePage(pageId) {
+            // Sembunyikan semua halaman
+            document.getElementById('home-page').classList.add('hidden');
+            document.getElementById('vision-page').classList.add('hidden');
+            document.getElementById('work-page').classList.add('hidden');
+
+            // Tampilkan halaman yang dipilih
+            document.getElementById(pageId).classList.remove('hidden');
+
+            // Scroll ke atas otomatis agar tidak nyangkut di tengah
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
